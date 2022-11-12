@@ -1,0 +1,198 @@
+/* 
+// Layout:
+- Mobile: 375px
+- Desktop: 1440px
+
+// Colors
+-- Primary --
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+--Neutral--
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+
+// Fonts
+- Font size (paragraph): 16px;
+-font-family: 'Red Hat Display', sans-serif; (500,700,900)
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: #717fa6;
+
+  background: hsl(225, 100%, 94%) url(images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mr-bottom {
+  margin-bottom: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+}
+
+main {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 20.4375rem;
+
+  border-radius: 18px;
+  background-color: #fff;
+}
+
+.content {
+  text-align: center;
+  padding: 2rem 1.5rem;
+
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #1f2e55;
+  font-size: 1.375rem;
+  font-weight: 900;
+  line-height: 1.8125rem;
+}
+
+p {
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.plan-description {
+  background-color: hsl(225, 100%, 98%);
+
+  gap: 3.125rem;
+  padding: 1.0625rem 1rem;
+  border-radius: 11px;
+}
+
+.plan-content {
+  gap: 1.25rem;
+}
+
+.price-container {
+  flex-direction: column;
+}
+
+.price-disc {
+  color: #1f2e55;
+  font-weight: 900;
+}
+
+.price-disc,
+.price {
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+}
+
+.change-link {
+  color: #382ae1;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.0625rem;
+}
+
+.change-link:hover,
+.change-link:focus {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #382ae1;
+  color: #fff;
+  line-height: 1.25rem;
+  font-weight: 900;
+
+  border: none;
+  border-radius: 11px;
+
+  padding: 0.9375rem 4.0625rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #766cf1;
+}
+
+.cancel-btn {
+  color: #717fa6;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.cancel-btn:hover,
+.cancel-btn:focus {
+  color: #1f2e55;
+}
+
+@media (min-width: 31em) {
+  body {
+    font-size: 1rem;
+  }
+
+  .mr-bottom-dsk {
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    max-width: 28.125rem;
+  }
+
+  .content {
+    min-width: 22.125rem;
+    padding: 2.8125rem 3rem;
+  }
+
+  .plan-description {
+    padding: 1.5625rem 1.5rem;
+    gap: 5.875rem;
+  }
+
+  .btn {
+    padding: 0.9375rem 6.375rem;
+  }
+
+  p {
+    margin-bottom: 1.25rem;
+  }
+}
