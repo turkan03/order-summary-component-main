@@ -5,13 +5,13 @@
 
 // Colors
 -- Primary --
-- Pale blue: hsl(225, 100%, 94%)
-- Bright blue: hsl(245, 75%, 52%)
+- Pale: hsl(225, 100%, 94%)
+- Bright: hsl(245, 75%, 52%)
 
 --Neutral--
-- Very pale blue: hsl(225, 100%, 98%)
-- Desaturated blue: hsl(224, 23%, 55%)
-- Dark blue: hsl(223, 47%, 23%)
+- Very pal: hsl(225, 100%, 98%)
+- Desaturated: #717FA6;
+- Dark: hsl(223, 47%, 23%)
 
 // Fonts
 - Font size (paragraph): 16px;
@@ -33,166 +33,144 @@
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+
+  height: 100vh;
+
   font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
   font-weight: 500;
-  font-size: 0.9375rem;
+  line-height: 1.625rem;
   color: #717fa6;
 
-  background: hsl(225, 100%, 94%) url(images/pattern-background-mobile.svg);
-  background-repeat: no-repeat;
+  background: #e0e8ff url(/images/pattern-background-desktop.svg);
   background-size: cover;
-}
-
-.flexbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mr-bottom {
-  margin-bottom: 1.5rem;
+  background-repeat: no-repeat;
 }
 
 img {
+  display: block;
+
   max-width: 100%;
   height: auto;
-  display: block;
-  border-top-right-radius: 18px;
-  border-top-left-radius: 18px;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-main {
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main {
+  place-self: center;
+  margin: 6.375rem 0;
 }
 
-.container {
-  max-width: 20.4375rem;
+.card {
+  max-width: 28.125rem;
 
-  border-radius: 18px;
   background-color: #fff;
+  border-radius: 20px;
 }
 
-.content {
+.card__content {
+  padding: 2.8125rem 3rem 3rem;
   text-align: center;
-  padding: 2rem 1.5rem;
-
-  flex-direction: column;
 }
 
 h2 {
-  margin-bottom: 1rem;
-  color: #1f2e55;
-  font-size: 1.375rem;
+  color: #1f2f56;
   font-weight: 900;
-  line-height: 1.8125rem;
+  font-size: 1.75rem;
+  line-height: 2.3125rem;
+  margin-bottom: 1.0625rem;
 }
 
 p {
-  font-weight: 500;
-  line-height: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
-.plan-description {
-  background-color: hsl(225, 100%, 98%);
+.card__plan {
+  background-color: #f5f7ff;
 
-  gap: 3.125rem;
-  padding: 1.0625rem 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+
+  padding: 1.5rem 1.5625rem;
+  margin-bottom: 2rem;
   border-radius: 11px;
 }
 
-.plan-content {
+.plan__itm {
+  display: flex;
+  align-items: center;
   gap: 1.25rem;
 }
 
-.price-container {
+.plan__price {
+  display: flex;
   flex-direction: column;
+  line-height: 1.3125rem;
 }
 
-.price-disc {
-  color: #1f2e55;
+.price__text {
   font-weight: 900;
+  color: #1f2f56;
+  margin-bottom: 6px;
 }
 
-.price-disc,
-.price {
-  font-size: 0.875rem;
-  line-height: 1.1875rem;
-}
-
-.change-link {
-  color: #382ae1;
-  font-size: 0.8125rem;
+.plan-change__link {
   font-weight: 700;
-  line-height: 1.0625rem;
+  font-size: 0.875rem;
+  justify-self: end;
 }
 
-.change-link:hover,
-.change-link:focus {
+.plan-change__link:link,
+.plan-change__link:visited {
+  color: #382ae1;
+}
+
+.plan-change__link:hover,
+.plan-change__link:active {
   color: #766cf1;
   text-decoration: none;
 }
 
-.btn {
-  background-color: #382ae1;
-  color: #fff;
-  line-height: 1.25rem;
-  font-weight: 900;
-
-  border: none;
-  border-radius: 11px;
-
-  padding: 0.9375rem 4.0625rem;
+.btn__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.btn:hover,
-.btn:focus {
+.btn__cancel,
+.btn__payment {
+  font-size: 0.9375rem;
+  font-weight: 900;
+  line-height: 1.25rem;
+}
+
+.btn__payment:link,
+.btn__payment:visited {
+  background-color: #382ae1;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.9375rem 0;
+  border-radius: 11px;
+}
+
+.btn__payment:hover,
+.btn__payment:active {
   background-color: #766cf1;
 }
 
-.cancel-btn {
+.btn__cancel:link,
+.btn__cancel:visited {
   color: #717fa6;
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
 }
 
-.cancel-btn:hover,
-.cancel-btn:focus {
-  color: #1f2e55;
-}
-
-@media (min-width: 31em) {
-  body {
-    font-size: 1rem;
-  }
-
-  .mr-bottom-dsk {
-    margin-bottom: 2rem;
-  }
-
-  .container {
-    max-width: 28.125rem;
-  }
-
-  .content {
-    min-width: 22.125rem;
-    padding: 2.8125rem 3rem;
-  }
-
-  .plan-description {
-    padding: 1.5625rem 1.5rem;
-    gap: 5.875rem;
-  }
-
-  .btn {
-    padding: 0.9375rem 6.375rem;
-  }
-
-  p {
-    margin-bottom: 1.25rem;
-  }
+.btn__cancel:hover,
+.btn__cancel:active {
+  color: #1f2f56;
 }
