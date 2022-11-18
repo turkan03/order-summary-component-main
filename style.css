@@ -1,24 +1,3 @@
-/* 
-// Layout:
-- Mobile: 375px
-- Desktop: 1440px
-
-// Colors
--- Primary --
-- Pale: hsl(225, 100%, 94%)
-- Bright: hsl(245, 75%, 52%)
-
---Neutral--
-- Very pal: hsl(225, 100%, 98%)
-- Desaturated: #717FA6;
-- Dark: hsl(223, 47%, 23%)
-
-// Fonts
-- Font size (paragraph): 16px;
--font-family: 'Red Hat Display', sans-serif; (500,700,900)
-
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
 * {
@@ -173,4 +152,50 @@ p {
 .btn__cancel:hover,
 .btn__cancel:active {
   color: #1f2f56;
+}
+
+@media (max-width: 32em) {
+  .mr--bottom {
+    margin-bottom: 1rem;
+  }
+
+  body {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+
+    background-image: url(/images/pattern-background-mobile.svg);
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    line-height: 1.8125rem;
+  }
+  .card {
+    max-width: 20.4375rem;
+  }
+
+  .card__content {
+    padding: 2rem 1.5rem;
+  }
+
+  .card__plan {
+    padding: 1.0625rem 1rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .plan__price {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+  }
+
+  .plan-change__link {
+    font-size: 0.8125rem;
+    line-height: 1.0625rem;
+  }
+
+  .btn__content {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    gap: 1.25rem;
+  }
 }
